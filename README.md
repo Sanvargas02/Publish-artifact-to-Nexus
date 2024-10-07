@@ -17,9 +17,11 @@ To upload artifacts, we need to create a Nexus user and assign the necessary per
 1. Navigate to **Settings** > **Security** > **Users**.
    ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/1-Select-user.png)
 2. Click on **Create local user**.
+   ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/2-Create-local-user.png)
 3. Now we need to create a role for the user:
    - Go to **Security** > **Roles**.
    - Click on **Create Role**.
+   ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/3-Create-role.png)
 
 ### Assign Permissions:
 We have a list of permissions that we can assign to the role. Common permissions include: 
@@ -28,6 +30,8 @@ We have a list of permissions that we can assign to the role. Common permissions
 - **Delete**
 - **Edit**
 - **Read**
+ ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/4-Permissions.png)
+ ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/5-Permissions.png) 
 
 ### Role Categories:
 There are two main categories of roles:
@@ -40,11 +44,13 @@ In our case, we want the role to have permissions to:
 
 ### Assigning the Role:
 - Select the **Views** option.
-- Apply the **Role Selections**.
+  ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/6-View-privilege.png) 
+- Apply the **Role Selections** if you want to.
 - Save the role.
 
 ### Assigning the Role to the User:
 1. Assign the role to the user you created.
+   ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/7-Assign-Role-to-user.png) 
 2. Now, you can use this **user** in your project to provide the **Gradle** or **Maven credentials** to connect to Nexus. (Maven/Gradle → User → Nexus).
 
 #### UNTIL HERE I HAVE THE FIRST PART - INTRO AND CREATION OF USER
