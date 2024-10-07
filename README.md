@@ -155,16 +155,20 @@ To configure a Maven project to upload a Jar file to Nexus, follow these steps:
 ### Steps:
 1. **Configure the `pom.xml` File**:
    - The file where we are going to configure the upload is the `pom.xml`.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/1-file-to-config.png)
 
 2. **Add the Plugin**:
    - First, configure the plugin that enables the upload of the Jar file to Nexus. 
    - In the first block, specify the version of the plugin and the plugin itself.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/2-Config-plugin.png)
 
 3. **Reload Maven**:
    - After configuring the plugin, reload Maven to apply the changes.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/3-Load-Plugin.png)
 
 4. **Configure the Nexus Repository**:
    - Set the location of the Nexus repository. The repository can have any `id`, but this `id` will help identify it between other repositories.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/4-Location-of-Nexus.png)
 
 5. **Reload Maven for Snapshots**:
    - Reload Maven again to configure for snapshots.
@@ -173,18 +177,31 @@ To configure a Maven project to upload a Jar file to Nexus, follow these steps:
    - The user credentials must be configured in a specific directory. 
    - This directory is located inside `.m2`, where Maven stores its dependencies.
    - Inside `.m2`, create a directory for global Maven credentials (accessible for all Maven projects).
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/5-User-credential.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/6-Maven-Global-Credential.png)
 
 7. **Create `settings.xml`**:
    - Use the command `vim settings.xml` to create the file.
    - Set the credentials for the Nexus user and define the same repository `id` that you used in `pom.xml`.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/7-Set-credential.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/8-Set-credential.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/9-Set-credential.png)
 
 8. **Upload the Jar to Nexus**:
    - All is set to upload the Jar file to Nexus.
    - First, build the Jar file.
    - Navigate to the project and run the Maven command to build it (`mvn build`).
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/10-Creating-the-build.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/11-Creating-the-build.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/12-Creating-the-build.png)
    - The target folder will contain the Jar file.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/13-target-jar.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/14-target-jar.png)
 
 9. **Upload the Jar**:
    - Use the `mvn deploy` command to upload the Jar to Nexus.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/15-upload-jar.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/16-upload-jar.png)
    - You can now see the project Jar in the Browse section under `maven-snapshots`.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Maven-Project-Config-and-Upload/17-Jar-in-browser.png)
 
