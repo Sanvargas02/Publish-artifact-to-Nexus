@@ -1,4 +1,4 @@
-# Publish Artifact to Nexus Repository (Project)
+# Publish Artifact to Nexus Repository 
 
 ## Introduction
 In this project, we will focus on uploading a Jar file to an existing hosted repository in Nexus using Maven or Gradle. 
