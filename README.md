@@ -127,16 +127,25 @@ To set up a Gradle project for publishing artifacts to Nexus, follow these steps
 ### Steps:
 1. **Build the Project**:
    - Run `gradle build` to create the Jar file.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/24-building-app.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/25-building-app.png)
 
 2. **Prepare for Upload**:
    - With the Jar ready, search the build directory to confirm that it exist in the terminal.
    - Use the `gradle publish` command to upload the Jar. This command was enabled by the plugin added to the `build.gradle` file (it is not a default Gradle command).
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/26-Gradle-publish.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/27-Gradle-publish.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/28-Gradle-publish.png)
 
 3. **Verify in Nexus**:
    - Go to the **Browse** option in Nexus to see the different components in your repository.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/29-browse-repositorie.png)
    - Check the `maven-snapshots` repository to see your app. The package name (e.g., `my-app`) will appear, and other folders represent the configuration group.
    - Expand the package to view the Jar file and other metadata files.
-   - 
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/30-my-app-upload.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/31-my-app-upload.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/32-my-app-upload.png)
+     
 #### UNTIL HERE I HAVE THE SECOND PART - GRADLE PROJECT CONFIG AND UPLOAD
 
 ## Maven Project Configuration with Nexus and Jar Upload
