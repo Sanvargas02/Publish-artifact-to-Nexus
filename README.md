@@ -65,37 +65,60 @@ To set up a Gradle project for publishing artifacts to Nexus, follow these steps
 
 2. **Add the Maven Publishing Plugin**:
    - We are going to add a plugin to publish a Jar file to a Maven repository format (since Maven and Gradle use the same format to upload Java artifacts).
+     ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/1-Adding-Plugin.png) 
    - This allows Gradle to connect to Nexus and push to its Maven repository.
    - Refresh/reload the Gradle project after adding the plugin.
+     ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/2-Refresh.png) 
 
 3. **Configure the Publishing Block**:
    - In this block, we configure the Jar file publications to be uploaded, and set the Nexus repository where the Jar will be uploaded.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/3-Publishing-Config-Blocks.png)
 
 4. **Set the Publications Block**:
    - In this block, add the path to the Jar file from the build directory.
    - Define the version in the same block.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/4-Publication-block.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/5-Publication-block.png)
 
 5. **Configure the Repositories Block**:
    - Add the Nexus information, including the repository name, URL, credentials, etc.
    - Each repository has its own URL, which can be seen in Nexus.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/6-Repositorie-Block.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/7-Repositorie-Block.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/8-Repositorie-Block.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/9-Repositorie-Block.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/10-Repositorie-Block.png)
 
 6. **Upload to Maven Snapshots**:
    - For development, we are going to upload to the `maven-snapshots` repository.
    - If we need to release a stable version, we will upload it to `maven-releases`.
    - **Note**: Snapshots are for development and testing, while releases are for production.
+     ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/11-Upload-to-snapshots.png)
+     ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/12-Upload-to-snapshots.png)
 
 7. **Set the Credentials Block**:
    - Add the Nexus username and password. 
    - **Important**: Do not hardcode credentials directly in the code to avoid tracking sensitive information in Git/GitHub. Instead, create a Gradle properties file.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/13-gradle-properties-file.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/14-gradle-properties-file.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/15-gradle-properties-file.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/16-gradle-properties-file.png)
 
 8. **Update the `settings.gradle` file**:
    - Change the name of the app if necessary.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/17-change-name-app.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/18-change-name-app.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/19-change-name-app.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/20-change-name-app.png)
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/21-change-name-app.png)
 
 9. **Allow Insecure Protocol**:
    - Since we are not using HTTPS (SSL encryption) to connect to Nexus yet, allow the insecure protocol in the configuration.
+   - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/22-Insecure-Protocol.png)
 
 10. **Reload Gradle**:
     - Reload or apply Gradle changes to ensure all configurations are updated.
+    - ![Alt Text](Nexus-Artifact-Repositorie-Manager/Gradle-Project-Config-and-Upload/23-Reload-Gradle-Project.png)
     
 ---
 
