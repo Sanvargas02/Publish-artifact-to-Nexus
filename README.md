@@ -15,7 +15,7 @@ To upload artifacts, we need to create a Nexus user and assign the necessary per
 
 ### Steps:
 1. Navigate to **Settings** > **Security** > **Users**.
-   ![Alt Text](Nexus - Artifact-Repositorie-Manager/create-a-nexus-user/1-Select-user.png)
+   ![Alt Text](Nexus-Artifact-Repositorie-Manager/create-a-nexus-user/1-Select-user.png)
 2. Click on **Create local user**.
 3. Now we need to create a role for the user:
    - Go to **Security** > **Roles**.
