@@ -11,10 +11,11 @@ In this project, we will focus on uploading a Jar file to an existing hosted rep
 
 ## Create Nexus User and Assign Permissions
 
-To upload artifacts, we need to create a Nexus user and assign the necessary permissions. **Note**: Typically, users are not created manually; they are integrated from the company LDAP. However, for this example, we will create a user manually.
+To upload artifacts, we need to create a Nexus user and assign the necessary permissions. **Note**: Typically, users are not created manually; they are integrated from the company with LDAP. However, for this example, we will create a user manually.
 
 ### Steps:
 1. Navigate to **Settings** > **Security** > **Users**.
+   ![Alt Text](Nexus - Artifact-Repositorie-Manager/create-a-nexus-user/1-Select-user.png)
 2. Click on **Create local user**.
 3. Now we need to create a role for the user:
    - Go to **Security** > **Roles**.
